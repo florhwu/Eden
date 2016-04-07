@@ -1,7 +1,15 @@
-doctype html
+doctype
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title #{title} - Eden
+    link(rel='stylesheet', href='/stylesheets/style.styl')
   body
-    block content
+    header
+      h1 Project Eden
+    .container
+      .main-content
+        block content
+      .sidebar
+        block sidebar
+    footer
+      p Running on node with Express, Jade and Stylus
