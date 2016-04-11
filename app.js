@@ -6,10 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var nib = require('nib');
-var stylus = require('stylus')
+var stylus = require('stylus');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var cover = require('./routes/cover');
+var main = require('./routes/index');
+var hap = require('./routes/hap');
 
 var app = express();
 
@@ -37,8 +38,9 @@ app.use(require('stylus').middleware(
     }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
+app.use('/', cover);
+app.use('/main', main);
+app.use('/hap', hap);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
