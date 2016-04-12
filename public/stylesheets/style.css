@@ -105,7 +105,7 @@ a img {
  */
 body {
   font-family: 'Quicksand';
-  background-color: #f5fafa;
+  background-color: #e4f0ec;
   color: #06222f;
 }
 header {
@@ -118,7 +118,7 @@ header {
    * Note the use of the `main-color`
    * variable and the `darken` function
    */
-  background-color: #c1dad6;
+  background-color: #5ea2a5;
 }
 .container {
   width: 500px;
@@ -150,12 +150,23 @@ header {
   display: block;
 }
 body {
-  background-color: #f5fafa;
+  background-color: #e4f0ec;
 }
 body p {
   font-size: 13px;
   padding: 0px 10px;
   margin-bottom: 10px;
+}
+body a {
+  text-align: center;
+  background-color: #e4f0ec;
+  padding: 14px 25px;
+}
+body a link {
+  color: #000;
+}
+body a havor {
+  color: #296379;
 }
 p {
   line-height: 1.8;
