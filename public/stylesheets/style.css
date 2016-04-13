@@ -105,20 +105,20 @@ a img {
  */
 body {
   font-family: 'Quicksand';
-  background-color: #e4f0ec;
-  color: #06222f;
+  background-color: #fff;
+  color: #000;
 }
 header {
   font-family: 'Quicksand';
   padding: 50px 10px;
-  color: #06222f;
+  color: #fff;
   font-size: 30px;
   text-align: center;
 /*
    * Note the use of the `main-color`
    * variable and the `darken` function
    */
-  background-color: #5ea2a5;
+  background-color: #000;
 }
 .container {
   width: 500px;
@@ -150,7 +150,7 @@ header {
   display: block;
 }
 body {
-  background-color: #e4f0ec;
+  background-color: #fff;
 }
 body p {
   font-size: 13px;
@@ -159,11 +159,10 @@ body p {
 }
 body a {
   text-align: center;
-  background-color: #e4f0ec;
-  padding: 14px 25px;
-}
-body a link {
+  background-color: #fff;
+  padding: 10px 20px;
   color: #000;
+  text-decoration: none;
 }
 body a havor {
   color: #296379;

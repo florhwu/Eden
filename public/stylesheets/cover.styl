@@ -20,6 +20,7 @@ global-reset()
  */
 
 background-color = white
+theme = #34DDDD
 c1 = #5EA2A5
 c2 = #296379
 c3 = #C2324B
@@ -33,26 +34,31 @@ body
     font-family 'Poiret One'
     font-size 40px
 
-    margin auto
-    width 40%
-    border 1px solid white
-    padding 30px
-
-
     position relative
-    top 50%
-    transform translateY(150%)
+    top 700%
+    transform translateY(550%)
 
 
-    a
-
+    a:link
         text-align center
         padding 14px 25px
         color white
         text-decoration none
 
-        link
-            color white
+        margin auto
+        width 70%
+        border 1px solid white
+        padding 40px 160px
 
-        hover
-            color c3
+    a:visited
+        color white
+
+    a:hover
+        color theme
+
+        margin auto
+        width 70%
+        border 1.5px solid theme
+        padding 40px 160px
+
+

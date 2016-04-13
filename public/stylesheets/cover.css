@@ -109,27 +109,31 @@ body {
   background-color: #000;
   font-family: 'Poiret One';
   font-size: 40px;
-  margin: auto;
-  width: 40%;
-  border: 1px solid #fff;
-  padding: 30px;
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(150%);
-  -moz-transform: translateY(150%);
-  -o-transform: translateY(150%);
-  -ms-transform: translateY(150%);
-  transform: translateY(150%);
+  top: 700%;
+  -webkit-transform: translateY(550%);
+  -moz-transform: translateY(550%);
+  -o-transform: translateY(550%);
+  -ms-transform: translateY(550%);
+  transform: translateY(550%);
 }
-body a {
+body a:link {
   text-align: center;
   padding: 14px 25px;
   color: #fff;
   text-decoration: none;
+  margin: auto;
+  width: 70%;
+  border: 1px solid #fff;
+  padding: 40px 160px;
 }
-body a link {
+body a:visited {
   color: #fff;
 }
-body a hover {
-  color: #c2324b;
+body a:hover {
+  color: #34dddd;
+  margin: auto;
+  width: 70%;
+  border: 1.5px solid #34dddd;
+  padding: 40px 160px;
 }
