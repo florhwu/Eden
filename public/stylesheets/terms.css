@@ -4,6 +4,9 @@
 /*
  * Grab a custom font from Google
  */
+@import url("http://fonts.googleapis.com/css?family=Josefin+Sans");
+@import url("http://fonts.googleapis.com/css?family=Josefin+Slab");
+@import url("http://fonts.googleapis.com/css?family=Poiret+One");
 @import url("http://fonts.googleapis.com/css?family=Quicksand");
 /*
  * Nib provides a CSS reset
@@ -103,61 +106,49 @@ a img {
  * Store the main color and
  * background color as variables
  */
-body {
-  font-family: 'Quicksand';
-  background-color: #fff;
-  color: #000;
-}
 header {
-  font-family: 'Quicksand';
-  padding: 50px 10px;
+  padding: 30px 10px 10px 10px;
   color: #fff;
-  font-size: 30px;
+  font-family: 'Poiret One';
+  font-size: 40px;
   text-align: center;
-/*
-   * Note the use of the `main-color`
-   * variable and the `darken` function
-   */
   background-color: #000;
-}
-.container {
-  width: 600px;
-  margin: 50px auto;
-  overflow: hidden;
-}
-.main-content {
-  float: left;
-  width: 300px;
-}
-.main-content p {
-  margin-bottom: 20px;
+  border-bottom-style: solid;
+  border-color: #fff;
+  border-width: 1px;
 }
 body {
-  background-color: #fff;
+  font-family: 'Quicksand';
+  font-size: 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  width: 700px;
+  margin: 50px auto;
+  padding-top: 40px;
 }
 body p {
-  font-size: 13px;
-  padding: 0px 10px;
-  margin-bottom: 10px;
+  line-height: 150%;
+  padding-top: 10px;
 }
-body a {
+body input[type = checkbox] {
+  line-height: 100%;
+  padding: 20px 20px;
+  margin: 8px 0;
+}
+body input[type = button] {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 15px 32px;
   text-align: center;
-  vertical-align: text-top;
-  background-color: #fff;
-  padding: 10px 150px;
-  color: #000;
   text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
-body a:hover {
+body input[type = button]:hover {
   color: #34dddd;
-}
-p {
-  line-height: 1.8;
-}
-footer {
-  width: 500px;
-  margin: 50px auto;
-  border-top: 1px dotted #ccc;
-  padding-top: 5px;
-  font-size: 10px;
+  border: 1px solid #34dddd;
 }

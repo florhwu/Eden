@@ -8,7 +8,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     // takes the name of the view to render
     // followed by an object whose properties the view will have access to
-    res.render('hap', { title: 'Happiness' });
+    res.render('philo', { title: 'Ideas' });
 });
 
 module.exports = router;

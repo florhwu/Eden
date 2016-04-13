@@ -1,0 +1,83 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Josefin+Sans')
+@import url('http://fonts.googleapis.com/css?family=Josefin+Slab')
+@import url('http://fonts.googleapis.com/css?family=Poiret+One')
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+/*
+ * Store the main color and
+ * background color as variables
+ */
+background-color = #E4F0EC
+text = #06222f
+theme = #34DDDD
+c1 = #5EA2A5
+c2 = #296379
+c3 = #C2324B
+c4 = #B1A9B8
+c5 = #F0DFD5
+
+header
+    //font-family 'Josefin Slab'
+    padding 30px 10px 10px 10px
+
+    color white
+    font-family 'Poiret One'
+    font-size 40px
+    text-align center
+
+    background-color black
+
+    border-bottom-style solid
+    border-color white
+    border-width 1px
+
+body
+    font-family 'Quicksand'
+    //font-family 'Josefin Sans'
+    font-size 20px
+    background-color black
+    color white
+
+    text-align center
+
+    width 700px
+    margin 50px auto
+    padding-top 40px
+
+    p
+        line-height 150%
+        padding-top 10px
+
+    input[type = checkbox]
+        line-height 100%
+        padding 20px 20px
+        margin 8px 0
+    input[type = button]
+        background-color black
+        border white
+        color white
+        padding 15px 32px
+        text-align center
+        text-decoration none
+        display inline-block
+        font-size 16px
+        margin 4px 2px
+        cursor pointer
+    input[type = button]:hover
+        color theme
+        border theme
+
+

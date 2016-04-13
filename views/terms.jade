@@ -1,0 +1,55 @@
+//
+   Created by florencewu on 13/4/2016.
+
+doctype
+html
+    head
+        title #{title} - Eden
+        link(rel='stylesheet', href='/stylesheets/terms.css')
+
+    header
+        p Terms and Conditions
+
+    body
+        script(type='text/javascript').
+            function checkBox(form) {
+                if (form.term1.checked == false || form.term2.checked == false) {
+                    alert('Please check the box to continue.');
+                    return false;
+
+                } else {
+                    return document.location.href='/main';
+                }
+            }
+
+        form(name="terms of agreement", method="POST", onsubmit="return document.location.href='/main';")
+
+            p I am aware that:
+            br
+            //check box 1
+            input(
+                type='checkbox'
+                name='term1'
+                checked = false
+            )
+            |  I am an individual
+
+            br
+
+            //check box 2
+            input(
+                type='checkbox'
+                name='term2'
+                checked = false
+            )
+            |  I am an intellectual
+
+            br
+
+            //submit
+            input(
+                type= 'button'
+                name= 'submit'
+                value= 'Enter Eden'
+                onClick="checkBox(this.form)"
+            )
