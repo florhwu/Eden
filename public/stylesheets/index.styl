@@ -44,13 +44,14 @@ body
         //text-shadow 1px 1px black
 
         position relative
-        top 700%
-        transform translateY(450%)
+        top 500%
+        transform translateY(370%)
     p
         color text
         font-family "Quicksand"
         text-align center
         font-size 20px
+        text-decoration none
         //text-shadow 1px 1px black
 
         padding 14px 10px 10px 550px
@@ -59,18 +60,55 @@ body
         top 48%
         transform translateY(50%)
 
-    a
-        text-align center
-        vertical-align text-top
-        background-color rgba(0, 0, 0, 0.6)
-
-        padding 10px 100px
+    div
         color white
-        text-decoration none
+        font-family Quicksand
 
         position relative
-        top 30%
-        transform translateY(50%)
+        top 50%
+        transform translateY(10%)
 
-    a:hover
-        color theme
+        .dropbtn
+            background-color rgba(0, 0, 0, 0.6)
+            padding 16px 105.2px
+
+            border none
+            cursor pointer
+
+        .dropbtn a
+            font-family Quicksand
+
+            text-decoration none
+            color white
+            font-size 18px
+
+
+        .dropdown
+            position relative
+            display inline-block
+
+        .dropdown-content
+            display none
+            padding 16px 50px
+
+            position absolute
+            background-color rgba(0, 0, 0, 0.3)
+            min-width 250px
+
+        .dropdown-content a
+            text-align left
+            font-family Quicksand
+            color white
+            padding 20px 0px
+
+            text-decoration none
+            display block
+
+        .dropdown-content a:hover
+            color theme
+
+        .dropdown:hover .dropdown-content
+            display block
+
+        .dropdown:hover .dropbtn
+            color theme
