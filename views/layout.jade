@@ -6,13 +6,37 @@ html
     body
         header
             h1 Project Eden
-        div.dropdown
-            ul.dropdown-menu(role="menu")
-                a(href="/main", role="menuitem", tabindex="-1") Home
-                a(href="/philo", role="menuitem", tabindex="-1") Some Ideas
-                a(href="#", role="menuitem", tabindex="-1") Denumerification
+        div
+            .dropdown
+                button.dropbtn
+                    a(href="/main", role="menuitem", tabindex="-1") Home
+            .dropdown
+                button.dropbtn
+                    a(href="/philo", role="menuitem", tabindex="-1") Some Ideas
+                .dropdown-content
+                    a(href="/rules", role="menuitem", tabindex="-1") The 3 Fundamental Rules
+                    a(href="#", role="menuitem", tabindex="-1") The Pyramid of Life
+                    a(href="/philo", role="menuitem", tabindex="-1") About Happiness
+            .dropdown
+                button.dropbtn
+                    a(href="#", role="menuitem", tabindex="-1") Denumerification
+                .dropdown-content
+                    a(href="#", role="menuitem", tabindex="-1") Path Builder to Dreams
+                    a(href="#", role="menuitem", tabindex="-1") Startups
+                    a(href="#", role="menuitem", tabindex="-1") Contribute
+            .dropdown
+                button.dropbtn
+                    a(href="#", role="menuitem", tabindex="-1") About Me
+        .gear
+            .left
+                img(src= "https://openclipart.org/image/2400px/svg_to_png/213252/Gear-icon.png")
+            .right
+                //img(src="http://liraprogram.com/website/Portals/0/Images/LIRA/industrygears.gif")
+
         .container
             .main-content
                 block content
-        footer
-            p @FloW
+
+    //footer
+    //    p
+    //        | @FloW

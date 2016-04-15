@@ -26,38 +26,66 @@ c3 = #C2324B
 c4 = #B1A9B8
 c5 = #F0DFD5
 
-body
-    font-family 'Quicksand'
-    background-color white
-    color black
 
 header
     font-family 'Quicksand'
     padding 50px 10px
     color white
     font-size 30px
-    text-align center /*
-   * Note the use of the `main-color`
-   * variable and the `darken` function
-   */
+    text-align center
+    //border-bottom solid 0.5px white
     background-color black
 
 .container
-    width 600px
-    margin 50px auto
-    overflow hidden
+    width 800px
+    margin 10px auto
+    z-index -1
+    padding-bottom 10px
 
-.main-content
-    float left
-    width 300px
+    .main-content
+        background-color rgba(0, 0, 0, 0.6)
+        padding 70px
+        border solid 1px black
+        text-align left
+        color white
 
-    p
-        margin-bottom 20px
+        p1
+            font-family Quicksand
+
+            font-size 30px
+            line-height 200%
+
+        p2
+            font-family Quicksand
+            font-size 16px
+            word-spacing 5px
+            line-height 150%
+
+        p3
+
+            font-family Quicksand
+            font-size 16px
+            word-spacing 5px
+
+            line-height 150%
+
+        p4
+            font-family Quicksand
+            font-size 50px
+            line-height 200%
+
+    br
+        height 20px
+
+    img
+        padding 20px
+        max-width 100px
+        text-align center
+
 
 
 body
-    background-color white
-
+    background-image url('http://orig05.deviantart.net/b39d/f/2015/217/5/e/gear_gif_by_zero_the_noob_artis-d94baao.gif')
 
     p
         font-size 13px
@@ -74,12 +102,100 @@ body
 
     a:hover
         color theme
-p
-    line-height 1.8
+
+    div
+        color white
+        font-family Quicksand
+
+        position relative
+        top 50%
+        transform translateY(10%)
+
+        .dropbtn
+            background-color black
+            padding 16px 95px
+
+            border none
+            cursor pointer
+
+        .dropbtn a
+            font-family Quicksand
+            background-color black
+            padding 10px 10px
+
+            text-decoration none
+            color white
+            font-size 18px
+
+
+        .dropdown
+            position relative
+            display inline-block
+
+        .dropdown-content
+            display none
+            //padding 16px 50px
+
+            position absolute
+            //background-color rgba(0, 0, 0, 0.6)
+
+
+        .dropdown-content a
+            text-align left
+            font-family Quicksand
+            background-color black
+            color white
+            padding 21px 20px
+
+            min-width 300px
+
+            text-decoration none
+            display block
+
+        .dropdown-content a:hover
+            color theme
+
+        .dropdown:hover .dropdown-content
+            display block
+
+        .dropdown:hover .dropbtn
+            color theme
+
+        .dropbtn a:hover
+            color theme
+    .gear
+        .left
+            position relative
+            top 1%
+            float left
+            img
+                width 300px
+            //z-index -1
+        .right
+            width 50px
+            position absolute
+            top 1%
+            margin-left 1000px
+            img
+                width 220px
+
+            //z-index -1
 
 footer
-    width 500px
-    margin 50px auto
-    border-top 1px dotted #ccc
-    padding-top 5px
-    font-size 10px
+    width 700px
+    font-family Quicksand
+    color black
+    //border-top 1px dotted black
+    margin-left 50px
+    padding 10px
+
+    clear both
+    position relative
+    z-index 10
+    height 3em
+    margin-top -3em
+
+    p
+        padding 5px
+
+

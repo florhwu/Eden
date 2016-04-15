@@ -12,6 +12,7 @@ var cover = require('./routes/cover');
 var terms = require('./routes/terms');
 var main = require('./routes/index');
 var philo = require('./routes/philo');
+var rules = require('./routes/rules');
 
 var app = express();
 
@@ -42,7 +43,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', cover);
 app.use('/terms', terms);
 app.use('/main', main);
+
 app.use('/philo', philo);
+app.use('/rules', rules);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

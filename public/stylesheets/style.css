@@ -103,37 +103,59 @@ a img {
  * Store the main color and
  * background color as variables
  */
-body {
-  font-family: 'Quicksand';
-  background-color: #fff;
-  color: #000;
-}
 header {
   font-family: 'Quicksand';
   padding: 50px 10px;
   color: #fff;
   font-size: 30px;
   text-align: center;
-/*
-   * Note the use of the `main-color`
-   * variable and the `darken` function
-   */
   background-color: #000;
 }
 .container {
-  width: 600px;
-  margin: 50px auto;
-  overflow: hidden;
+  width: 800px;
+  margin: 10px auto;
+  z-index: -1;
+  padding-bottom: 10px;
 }
-.main-content {
-  float: left;
-  width: 300px;
+.container .main-content {
+  background-color: rgba(0,0,0,0.6);
+  padding: 70px;
+  border: solid 1px #000;
+  text-align: left;
+  color: #fff;
 }
-.main-content p {
-  margin-bottom: 20px;
+.container .main-content p1 {
+  font-family: Quicksand;
+  font-size: 30px;
+  line-height: 200%;
+}
+.container .main-content p2 {
+  font-family: Quicksand;
+  font-size: 16px;
+  word-spacing: 5px;
+  line-height: 150%;
+}
+.container .main-content p3 {
+  font-family: Quicksand;
+  font-size: 16px;
+  word-spacing: 5px;
+  line-height: 150%;
+}
+.container .main-content p4 {
+  font-family: Quicksand;
+  font-size: 50px;
+  line-height: 200%;
+}
+.container br {
+  height: 20px;
+}
+.container img {
+  padding: 20px;
+  max-width: 100px;
+  text-align: center;
 }
 body {
-  background-color: #fff;
+  background-image: url("http://orig05.deviantart.net/b39d/f/2015/217/5/e/gear_gif_by_zero_the_noob_artis-d94baao.gif");
 }
 body p {
   font-size: 13px;
@@ -151,13 +173,90 @@ body a {
 body a:hover {
   color: #34dddd;
 }
-p {
-  line-height: 1.8;
+body div {
+  color: #fff;
+  font-family: Quicksand;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(10%);
+  -moz-transform: translateY(10%);
+  -o-transform: translateY(10%);
+  -ms-transform: translateY(10%);
+  transform: translateY(10%);
+}
+body div .dropbtn {
+  background-color: #000;
+  padding: 16px 95px;
+  border: none;
+  cursor: pointer;
+}
+body div .dropbtn a {
+  font-family: Quicksand;
+  background-color: #000;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+body div .dropdown {
+  position: relative;
+  display: inline-block;
+}
+body div .dropdown-content {
+  display: none;
+  position: absolute;
+}
+body div .dropdown-content a {
+  text-align: left;
+  font-family: Quicksand;
+  background-color: #000;
+  color: #fff;
+  padding: 21px 20px;
+  min-width: 300px;
+  text-decoration: none;
+  display: block;
+}
+body div .dropdown-content a:hover {
+  color: #34dddd;
+}
+body div .dropdown:hover .dropdown-content {
+  display: block;
+}
+body div .dropdown:hover .dropbtn {
+  color: #34dddd;
+}
+body div .dropbtn a:hover {
+  color: #34dddd;
+}
+body .gear .left {
+  position: relative;
+  top: 1%;
+  float: left;
+}
+body .gear .left img {
+  width: 300px;
+}
+body .gear .right {
+  width: 50px;
+  position: absolute;
+  top: 1%;
+  margin-left: 1000px;
+}
+body .gear .right img {
+  width: 220px;
 }
 footer {
-  width: 500px;
-  margin: 50px auto;
-  border-top: 1px dotted #ccc;
-  padding-top: 5px;
-  font-size: 10px;
+  width: 700px;
+  font-family: Quicksand;
+  color: #000;
+  margin-left: 50px;
+  padding: 10px;
+  clear: both;
+  position: relative;
+  z-index: 10;
+  height: 3em;
+  margin-top: -3em;
+}
+footer p {
+  padding: 5px;
 }
