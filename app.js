@@ -11,8 +11,13 @@ var stylus = require('stylus');
 var cover = require('./routes/cover');
 var terms = require('./routes/terms');
 var main = require('./routes/index');
+
 var philo = require('./routes/philo');
 var rules = require('./routes/rules');
+var pyramid = require('./routes/pyramid');
+var hap = require('./routes/hap');
+
+var flow = require('./routes/flow');
 
 var app = express();
 
@@ -46,6 +51,10 @@ app.use('/main', main);
 
 app.use('/philo', philo);
 app.use('/rules', rules);
+app.use('/pyramid',pyramid);
+app.use('/hap', hap);
+
+app.use('/flow', flow);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
