@@ -106,11 +106,21 @@ a img {
  */
 header {
   font-family: 'Poiret One';
-  padding: 50px 10px;
+  padding: 20px 10px;
   color: #fff;
-  font-size: 30px;
   text-align: center;
   background-color: #000;
+}
+header a1 {
+  font-family: 'Poiret One';
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  background-color: #000;
+}
+header a2 {
+  color: #34dddd;
+  font-size: 45px;
 }
 .container {
   width: 800px;
@@ -119,11 +129,16 @@ header {
   padding-bottom: 10px;
 }
 .container .main-content {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.7);
   padding: 70px;
   border: solid 1px #000;
   text-align: left;
   color: #fff;
+}
+.container .main-content header {
+  font-family: Quicksand;
+  font-size: 30px;
+  text-align: center;
 }
 .container .main-content p1 {
   font-family: Quicksand;
@@ -135,6 +150,17 @@ header {
   font-size: 16px;
   word-spacing: 5px;
   line-height: 150%;
+}
+.container .main-content .pyramid img {
+  min-width: 600px;
+  padding: 0px;
+  float: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 .container .main-content p3 {
   font-family: Quicksand;
@@ -157,6 +183,9 @@ header {
 }
 body {
   background-image: url("http://orig05.deviantart.net/b39d/f/2015/217/5/e/gear_gif_by_zero_the_noob_artis-d94baao.gif");
+  -webkit-background-size: 1280px;
+  -moz-background-size: 1280px;
+  background-size: 1280px;
 }
 body p {
   font-size: 13px;
