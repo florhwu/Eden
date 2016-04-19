@@ -140,6 +140,15 @@ header a2 {
   font-size: 30px;
   text-align: center;
 }
+.container .main-content p a {
+  padding: 0px;
+  background-color: rgba(0,0,0,0);
+  color: #fff;
+  text-align: center;
+}
+.container .main-content p a:hover {
+  color: #34dddd;
+}
 .container .main-content p1 {
   font-family: Quicksand;
   font-size: 30px;

@@ -17,6 +17,11 @@ var rules = require('./routes/rules');
 var pyramid = require('./routes/pyramid');
 var hap = require('./routes/hap');
 
+var denumerification  = require('./routes/denumerification');
+var goals = require('./routes/goals');
+var pathbuilder = require('./routes/pathbuilder');
+var contact = require('./routes/contact');
+
 var flow = require('./routes/flow');
 
 var app = express();
@@ -53,6 +58,11 @@ app.use('/philo', philo);
 app.use('/rules', rules);
 app.use('/pyramid',pyramid);
 app.use('/hap', hap);
+
+app.use('/denumerification', denumerification);
+app.use('/goals', goals);
+app.use('/pathbuilder', pathbuilder);
+app.use('/contact', contact);
 
 app.use('/flow', flow);
 
