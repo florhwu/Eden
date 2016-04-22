@@ -1,21 +1,13 @@
 //
    Created by florencewu on 19/4/2016.
-
-//doctype html
-//html
-//    head
-//        meta(charset='UTF-8')
-//        title PathBuilder
-//        script(src='https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js')
-//        script(src='https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js')
-//        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
-
 doctype html
 html(lang='en')
     head
-        title ArchitectureTree Demo
+        title Pathbuilder
         meta(charset='utf-8')
-        script(src="https://d3js.org/d3.v3.min.js", charset="utf-8")
+        //script(src="https://d3js.org/d3.v3.min.js", charset="utf-8")
+        //script(src="bower_components/angular/angular.js")
+        //script(src="js/controllers.js")
         link(rel='stylesheet', href='css/vendor/bootstrap.min.css')
         link(rel='stylesheet', href='css/tree.css')
     body
@@ -23,24 +15,24 @@ html(lang='en')
             div(ng-app='ChartsApp')
                 h1.text-center Architecture Tree
                 div(ng-controller='filterCtrl')
-                    ng-include(src="'js/angular.architectureTree/templates/filter.html'")
+                    ng(include src="'js/angular.architectureTree/templates/filter.html'")
                 div(ng-controller='chartCtrl')
-                    tree-chart(data='data', diameter='960')
+                    tree(chart data='data', diameter='960')
                 div(ng-controller='panelCtrl')
                     #panel
                         div(ng-if='detail')
-                            ng-include(src="'js/angular.architectureTree/templates/panel-detail.html'")
+                            ng(include src="'js/angular.architectureTree/templates/panel-detail.html'")
                         div(ng-if='edit')
-                            ng-include(src="'js/angular.architectureTree/templates/panel-edit.html'")
+                            ng(include src="'js/angular.architectureTree/templates/panel-edit.html'")
                 div(ng-controller='undoCtrl')
                     .json-upate-label.bg-success(ng-if='hasHistory()')
                         | Updated JSON
                         a(ng-click='undo()') (undo)
                 div(ng-controller='jsonDataCtrl')
                     textarea#json-data.form-control(ng-model='data', ng-blur='updateData()')
-        script(src='/js/vendor/d3.v3.js', type="text/javascript")
-        script(src='/js/vendor/angular.min.js')
-        script(src='/js/d3.architectureTree.js')
+        script(src='js/vendor/d3.v3.js')
+        script(src='js/vendor/angular.min.js')
+        script(src='js/d3.architectureTree.js')
         script(src='js/angular.architectureTree/app.js')
         script(src='js/angular.architectureTree/controllers/chart.js')
         script(src='js/angular.architectureTree/controllers/filter.js')
@@ -51,4 +43,4 @@ html(lang='en')
         script(src='js/angular.architectureTree/directives/init-focus.js')
         script(src='js/angular.architectureTree/services/data.js')
         script(src='js/angular.architectureTree/services/bus.js')
-| Status API Training Shop Blog About
+| Project Eden

@@ -26,6 +26,8 @@ var flow = require('./routes/flow');
 
 var app = express();
 
+app.locals.data = require('./data.json');
+
 //compile stylus to css
 function compile(str, path) {
     return stylus(str)
@@ -96,6 +98,13 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+// angular.module('ChartsApp', [])
+//     .run(function(data) {
+//       data.fetchJsonData().then(function (response) {
+//         console.log('data loaded');
+//       }, console.error);
+//     });
 
 
 module.exports = app;
