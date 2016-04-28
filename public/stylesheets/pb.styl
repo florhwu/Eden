@@ -1,0 +1,52 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+@import url('http://fonts.googleapis.com/css?family=Poiret+One')
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+/*
+ * Store the main color and
+ * background color as variables
+ */
+background-color = #E4F0EC
+text = #06222f
+theme = #34DDDD
+c1 = #5EA2A5
+c2 = #296379
+c3 = #C2324B
+c4 = #B1A9B8
+c5 = #F0DFD5
+
+
+
+.node circle
+    fill: #999
+
+
+.node text
+    font: 10px sans-serif;
+
+
+.node--internal circle
+    fill: #555;
+
+
+.node--internal text
+    text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+
+
+.link
+    fill: none;
+    stroke: #555;
+    stroke-opacity: 0.4;
+    stroke-width: 1.5px;

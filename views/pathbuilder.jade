@@ -1,46 +1,49 @@
-//
-   Created by florencewu on 19/4/2016.
-doctype html
-html(lang='en')
+html(ng-app='myApp')
     head
+        // Latest compiled and minified CSS
+        // bootstrap
+        link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+        link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css", integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r", crossorigin="anonymous")
+        link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS", crossorigin="anonymous")
+
+        //css
+        link(rel='stylesheet', href='/stylesheets/pb.css')
+
+        script(src='//d3js.org/d3.v4.0.0-alpha.29.min.js')
         title Pathbuilder
-        meta(charset='utf-8')
-        //script(src="https://d3js.org/d3.v3.min.js", charset="utf-8")
-        //script(src="bower_components/angular/angular.js")
-        //script(src="js/controllers.js")
-        link(rel='stylesheet', href='css/vendor/bootstrap.min.css')
-        link(rel='stylesheet', href='css/tree.css')
     body
-        .container-fluid
-            div(ng-app='ChartsApp')
-                h1.text-center Architecture Tree
-                div(ng-controller='filterCtrl')
-                    ng(include src="'js/angular.architectureTree/templates/filter.html'")
-                div(ng-controller='chartCtrl')
-                    tree(chart data='data', diameter='960')
-                div(ng-controller='panelCtrl')
-                    #panel
-                        div(ng-if='detail')
-                            ng(include src="'js/angular.architectureTree/templates/panel-detail.html'")
-                        div(ng-if='edit')
-                            ng(include src="'js/angular.architectureTree/templates/panel-edit.html'")
-                div(ng-controller='undoCtrl')
-                    .json-upate-label.bg-success(ng-if='hasHistory()')
-                        | Updated JSON
-                        a(ng-click='undo()') (undo)
-                div(ng-controller='jsonDataCtrl')
-                    textarea#json-data.form-control(ng-model='data', ng-blur='updateData()')
-        script(src='js/vendor/d3.v3.js')
-        script(src='js/vendor/angular.min.js')
-        script(src='js/d3.architectureTree.js')
-        script(src='js/angular.architectureTree/app.js')
-        script(src='js/angular.architectureTree/controllers/chart.js')
-        script(src='js/angular.architectureTree/controllers/filter.js')
-        script(src='js/angular.architectureTree/controllers/json-data.js')
-        script(src='js/angular.architectureTree/controllers/panel.js')
-        script(src='js/angular.architectureTree/controllers/undo.js')
-        script(src='js/angular.architectureTree/directives/tree-chart.js')
-        script(src='js/angular.architectureTree/directives/init-focus.js')
-        script(src='js/angular.architectureTree/services/data.js')
-        script(src='js/angular.architectureTree/services/bus.js')
-| Project Eden
+        div(class='row')
+            .container(ng-controller='AppCtrl')
+                h1 PathBuilder
+
+                div(class='col-xs-6 col-md-4')
+                    form(name="add-node", method="post")
+                        div.input
+                            | Name
+                            br
+                            input(ng-model='node.name', type="text", name="name")
+                            br
+                            | Description
+                            br
+                            input(ng-model='node.des', type="text", name="des")
+                            br
+                            | Link
+                            br
+                            input(ng-model='node.link', type="text", name="link")
+                            br
+                            | Budget
+                            br
+                            input(ng-model='node.budget', type="text", name="budget")
+                        div.action
+                            button(class="button-top", ng-click='add()') Submit
+                            button(class="button-top", ng-click='new()') Add Node
+                            button(class="button-top", ng-click='edit(node._id)') edit
+                            button(class="button-top", ng-click='delete(node._id)') Cancel
+
+                //canvas
+                script(src='js/tree.js')
+
+                //get click coordinates
+        // include angular
+        script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js')
+        script(src='js/controllers/chart.js')

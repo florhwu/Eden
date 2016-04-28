@@ -26,7 +26,7 @@ var flow = require('./routes/flow');
 
 var app = express();
 
-app.locals.data = require('./data.json');
+app.locals.data = require('./public/data.json');
 
 //compile stylus to css
 function compile(str, path) {
