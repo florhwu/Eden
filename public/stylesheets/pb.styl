@@ -28,25 +28,50 @@ c4 = #B1A9B8
 c5 = #F0DFD5
 
 
-
 .node circle
-    fill: #999
-
+    fill #fff
+    stroke steelblue
+    stroke-width 3px
 
 .node text
-    font: 10px sans-serif;
-
-
-.node--internal circle
-    fill: #555;
-
-
-.node--internal text
-    text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
-
+    font 12px Quicksand
 
 .link
-    fill: none;
-    stroke: #555;
-    stroke-opacity: 0.4;
-    stroke-width: 1.5px;
+    fill none
+    stroke #ccc
+    stroke-width 2px
+
+h1
+    font-family Quicksand
+    font-size 30px
+    text-align center
+    padding 30px 10px
+    border-bottom 1px solid darkgrey
+
+form
+    padding 20px
+    border 1px solid darkgrey
+    margin 30px
+    font-family Quicksand
+    line-height 150%
+    font-size 14px
+
+.input
+    padding 10px
+
+.sample-show-hide {
+    padding:10px;
+    border:1px solid black;
+    background:white;
+}
+
+.sample-show-hide {
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+}
+
+.sample-show-hide.ng-hide {
+    opacity:0;
+}
+
+

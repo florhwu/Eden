@@ -8,7 +8,10 @@ myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
     };
 
     $scope.new = function() {
-        //TODO canvas add node
+        //TODO append to tree array
+        //TODO call update
+        console.log($scope.node.name)
+        
     };
 
     $scope.delete = function(id) {
