@@ -1,4 +1,4 @@
-html(ng-app='myApp')
+html(ng-app='app')
     head
         // Latest compiled and minified CSS
         // bootstrap
@@ -11,38 +11,32 @@ html(ng-app='myApp')
 
         title Pathbuilder
     body
-        .container-fluid(ng-controller='AppCtrl')
+        .container-fluid(ng-controller='formInfo')
             h1 PathBuilder
 
             .row
                 .col-md-8
-                    script(src='//d3js.org/d3.v3.min.js')
-                    script(src='js/tree.js')
                 .col-md-4
-                    .check-element.sample-show-hide(ng-show='checked', style='clear:both;')
-                    form(name="add-node", method="post")
-                        div.input
-                            | Name
-                            br
-                            input(ng-model='node.name', type="text", name="name")
-                            br
-                            | Description
-                            br
-                            input(ng-model='node.des', type="text", name="des")
-                            br
-                            | Link
-                            br
-                            input(ng-model='node.link', type="text", name="link")
-                            br
-                            | Budget
-                            br
-                            input(ng-model='node.budget', type="text", name="budget")
-                        div.action
-                            button(class="button-top", ng-click='add()') Submit
-                            button(class="button-top", ng-click='new()') Add Node
-                            button(class="button-top", ng-click='edit(node._id)') edit
-                            button(class="button-top", ng-click='delete(node._id)') Cancel
+                    .check-element.sample-show-hide(ng-show="showForm")
+                        form(name="add-node", method="post")
+                            div
+                                | Name: {{name}}
+                                br
+                                | Description:
 
-        // include angular
+                                br
+                                | Link:
+
+                                br
+                                | Budget:
+                                br
+
+                            div.action
+                                button(class="button-top", ng-click='new()') Add Node
+                                button(class="button-top", ng-click='cancel()') Cancel
+
+
+        script(src='//d3js.org/d3.v3.min.js')
+        script(src='js/tree.js')
         script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js')
         script(src='js/controllers/chart.js')

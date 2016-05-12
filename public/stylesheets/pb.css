@@ -129,9 +129,27 @@ form {
   border: 1px solid #a9a9a9;
   margin: 30px;
   font-family: Quicksand;
+  min-width: 300px;
   line-height: 150%;
   font-size: 14px;
 }
 .input {
   padding: 10px;
+}
+.sample-show-hide {
+  padding: 10px;
+  background: #fff;
+}
+.sample-show-hide {
+  -webkit-transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.sample-show-hide.ng-hide {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }

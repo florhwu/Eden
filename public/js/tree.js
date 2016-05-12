@@ -56,7 +56,6 @@ update(root);
 d3.select(self.frameElement).style("height", "500px");
 
 function update(source) {
-
     // Compute the new tree layout.
     var nodes = tree.nodes(root).reverse(),
         links = tree.links(nodes);
@@ -144,6 +143,9 @@ function update(source) {
     });
 }
 
+var name = null;
+var form = false;
+
 // Toggle children on click.
 function click(d) {
     if (d.children) {
@@ -153,7 +155,11 @@ function click(d) {
         d.children = d._children;
         d._children = null;
     }
-    //TODO render form
-    
+
+    form = true;
+    name = d.name;
+    console.log("tree: name: " + name)
+    console.log("tree: form is: " + form)
+
     update(d);
 }

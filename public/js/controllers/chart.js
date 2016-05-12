@@ -1,25 +1,20 @@
-var myApp = angular.module('myApp', []);
+var app = angular.module('app', []);
+// console.log("init from to true")
 
-myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
+app.controller('formInfo', ['$scope', '$http', function($scope) {
 
-    $scope.add = function() {
-        console.log($scope.node);
-        $http.post('/nodes', $scope.node);
+    $scope.name = name;
+
+    $scope.showForm = true;
+    //$scope.showForm = form;
+
+    $scope.refresh = function() {
+        if ($scope.name != name || $scope.showForm != form) {
+            console.log('page reloading');
+            window.location.reload();
+        } else {
+            console.log('page ready')
+        }
     };
 
-    $scope.new = function() {
-        //TODO append to tree array
-        //TODO call update
-        console.log($scope.node.name)
-        
-    };
-
-    $scope.delete = function(id) {
-        $http.delete('/nodes'+ id);
-    };
-
-    $scope.edit = function(id) {
-        $http.edit('/node' + id);
-    };
-
-}])
+}]);
