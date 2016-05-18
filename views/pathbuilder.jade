@@ -10,8 +10,8 @@ html(ng-app='app')
         link(rel='stylesheet', href='/stylesheets/pb.css')
 
         title Pathbuilder
-    body
-        .container-fluid(ng-controller='formInfo')
+    body(ng-controller='formInfo', ng-mousedown='clicked()')
+        .container-fluid
             h1 PathBuilder
 
             .row

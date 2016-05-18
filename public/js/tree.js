@@ -25,6 +25,9 @@ var treeData = [
     }
 ];
 
+var name = undefined;
+var form = false;
+var clicked = false;
 
 // ************** Generate the tree diagram	 *****************
 var margin = {top: 20, right: 120, bottom: 20, left: 120},
@@ -143,9 +146,6 @@ function update(source) {
     });
 }
 
-var name = null;
-var form = false;
-
 // Toggle children on click.
 function click(d) {
     if (d.children) {
@@ -160,6 +160,7 @@ function click(d) {
     name = d.name;
     console.log("tree: name: " + name)
     console.log("tree: form is: " + form)
-
+    
     update(d);
+    //update angular side
 }

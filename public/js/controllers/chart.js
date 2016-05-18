@@ -3,11 +3,9 @@ var app = angular.module('app', []);
 
 app.controller('formInfo', ['$scope', '$http', function($scope) {
 
-    $scope.name = name;
+    $scope.showForm = false;
 
-    $scope.showForm = true;
-    //$scope.showForm = form;
-
+    //refresh form
     $scope.refresh = function() {
         if ($scope.name != name || $scope.showForm != form) {
             console.log('page reloading');
@@ -16,5 +14,10 @@ app.controller('formInfo', ['$scope', '$http', function($scope) {
             console.log('page ready')
         }
     };
+
+    $scope.clicked = function() {
+        $scope.showForm = true;
+        $scope.name = name;
+    }
 
 }]);
