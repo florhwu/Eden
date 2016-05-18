@@ -13,30 +13,3 @@ html(ng-app='app')
     body(ng-controller='formInfo', ng-mousedown='clicked()')
         .container-fluid
             h1 PathBuilder
-
-            .row
-                .col-md-8
-                .col-md-4
-                    .check-element.sample-show-hide(ng-show="showForm")
-                        form(name="add-node", method="post")
-                            div
-                                | Name: {{name}}
-                                br
-                                | Description:
-
-                                br
-                                | Link:
-
-                                br
-                                | Budget:
-                                br
-
-                            div.action
-                                button(class="button-top", ng-click='new()') Add Node
-                                button(class="button-top", ng-click='cancel()') Cancel
-
-
-        script(src='//d3js.org/d3.v3.min.js')
-        script(src='js/tree.js')
-        script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js')
-        script(src='js/controllers/chart.js')
