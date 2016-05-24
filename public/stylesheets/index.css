@@ -156,7 +156,8 @@ body div .dropbtn {
   position: relative;
   float: center;
   background-color: rgba(0,0,0,0.6);
-  padding: 16px 103px;
+  padding: 16px 80px;
+  width: 100%;
   border: none;
   cursor: pointer;
 }
@@ -165,10 +166,12 @@ body div .dropbtn a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
+  width: 100%;
 }
 body div .dropdown {
   position: relative;
   display: inline-block;
+  width: 25%;
 }
 body div .dropdown-content {
   display: none;
